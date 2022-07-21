@@ -20,6 +20,8 @@ try:
         bot.select_people(5)
         bot.click_search()
         bot.apply_filtrations()
+        # Check for the number of hotels in the report_deals() method
+        print(len(bot.report_results()))
 
 # If the above code raises an exception, execute this code below
 except Exception as e:

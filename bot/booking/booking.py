@@ -130,3 +130,7 @@ class Booking(webdriver.Firefox):
         # I specify the star value I want the bot to click
         filtration.apply_star_rating(4)
         filtration.sort_price_lowest_first()
+
+    def report_results(self):
+        hotel_boxes = self.find_element(By.ID, 'search_results_table').find_elements(By.CSS_SELECTOR, 'div[data-testid="property-card"]')
+        return hotel_boxes
